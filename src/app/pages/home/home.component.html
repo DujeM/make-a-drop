@@ -1,0 +1,12 @@
+<div class="main" *ngIf="!dropCreate && !dropFind">
+  <span class="title">Make a Drop</span>
+  <span>Quickly share files between devices</span>
+  <div class="flex">
+    <div class="button" [routerLink]="'/create'">Create</div>
+    <div class="button" [routerLink]="'/find'">Find</div>
+  </div>
+</div>
+
+<!-- <app-drop-create class="h-max" *ngIf="dropCreate" (cancelCreate)="cancelCreate($event)"></app-drop-create>
+
+<app-drop-find class="h-max" *ngIf="dropFind" (cancelCreate)="cancelCreate($event)"></app-drop-find> -->

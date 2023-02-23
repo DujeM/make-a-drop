@@ -1,0 +1,36 @@
+<div class="main" *ngIf="!deleteInProgress">
+  <ng-container *ngIf="!downloadInProgress else loading">
+    <span class="title text-shadow">Find a Drop</span>
+    <form [formGroup]="findForm" class="flex-col form-gap">
+      <div class="flex-col">
+        <label for="name">Name</label>
+        <input class="form-input" type="text" name="name" id="name" formControlName="name" autocomplete="off">
+      </div>
+      <div class="flex-col">
+        <label for="secret">Secret</label>
+        <input class="form-input secret-input" type="text" name="secret" id="secret" formControlName="secret" autocomplete="off">
+      </div>
+    </form>
+    <div class="flex">
+      <div class="button" (click)="cancel()">Cancel</div>
+      <div class="button button-color" (click)="findAndDownload()">Download</div>
+    </div>
+  </ng-container>
+  <ng-template #loading>
+    <div class="item flex-col-center">
+      <div class="item-progress-bar">
+          <span class="ml-10">Decrypting...</span>
+      </div>
+    </div>
+  </ng-template>
+</div>
+
+<div class="main" *ngIf="deleteInProgress">
+  <div class="item flex-col-center">
+    <h3>Do you want to delete your drop?</h3>
+    <div class="flex justify-center">
+      <div class="button" [routerLink]="'/home'">No</div>
+      <div class="button button-color" (click)="deleteFile()">Yes</div>
+    </div>
+  </div>
+</div>

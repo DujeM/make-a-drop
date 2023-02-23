@@ -1,0 +1,18 @@
+<div class="main">
+  <div class="dropzone"
+    dropzone
+    (hovered)="toggleHover($event)"
+    (dropped)="onDrop($event)">
+    <span>Drag and Drop</span>
+  </div>
+  <span>-or-</span>
+  <div class="file">
+  <label for="uploadBtn" class="button">Choose File</label>
+  <input type="file" id="uploadBtn" class="file-input" (change)="onDrop($event)" hidden>
+  </div>
+
+  <div *ngFor="let file of files">
+  <app-drop-item [file]="file" (fileDownloadUrl)="handleUploadedFile($event, file.name)"></app-drop-item>
+  </div>
+  <div class="button" (click)="finish()" *ngIf="downloadUrls.length">Finish</div>
+</div>

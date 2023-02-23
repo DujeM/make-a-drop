@@ -1,0 +1,19 @@
+<div class="main" *ngIf="!displayUpload">
+  <span class="title text-shadow">Create a Drop</span>
+  <form [formGroup]="createForm" class="flex-col form-gap">
+    <div class="flex-col">
+      <label for="name">Name</label>
+      <input class="form-input" type="text" name="name" id="name" formControlName="name" autocomplete="off">
+    </div>
+    <div class="flex-col">
+      <label for="secret">Secret</label>
+      <input class="form-input secret-input" type="text" name="secret" id="secret" formControlName="secret" autocomplete="off">
+    </div>
+  </form>
+  <div class="flex">
+    <div class="button" (click)="cancel()">Cancel</div>
+    <div class="button button-color" (click)="next()">Next</div>
+  </div>
+</div>
+
+<app-drop *ngIf="displayUpload" [formValue]="createForm.value"></app-drop>

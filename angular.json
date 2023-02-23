@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "make-a-drop:build:production",
+            "firebaseProject": "make-a-drop-2e66d",
+            "firebaseHostingSite": "make-a-drop-2e66d"
+          }
         }
       }
     }

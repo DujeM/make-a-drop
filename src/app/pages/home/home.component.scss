@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  margin: 20px 0px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.text-shadow {
+  color: #fff;
+  text-shadow: rgb(0 0 0 / 60%) 0 2px 8px;
+}
+
+.title {
+  font-size: 46px;
+}
+
+.button {
+  border: 1px solid;
+  padding: 10px 15px;
+  width: 80px;
+  font-size: 15px;
+  background: #f7ff1d;
+  border-radius: 15px;
+  font-weight: 800;
+  box-shadow: 5px 5px 0px 0px #000;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &:hover{
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #000;
+  }
+}
+
+.h-max {
+  height: 100%;
+}

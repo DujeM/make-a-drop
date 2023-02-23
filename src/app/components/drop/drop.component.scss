@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0px;
+  min-height: 100vh;
+}
+
+.dropzone {
+  border: 2px dashed;
+  box-shadow: 5px 5px 0px 0px #000;
+  min-height: 140px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  border: 1px solid;
+  padding: 10px 15px;
+  width: 80px;
+  font-size: 15px;
+  background: #f7ff1d;
+  border-radius: 15px;
+  font-weight: 800;
+  box-shadow: 5px 5px 0px 0px #000;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &:hover{
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #000;
+  }
+}

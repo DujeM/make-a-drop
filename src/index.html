@@ -1,13 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="app-background">
 <head>
   <meta charset="utf-8">
   <title>MakeADrop</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/icons/drop.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>
 </body>
 </html>
+
+<script>
+  let colors = ['#4effae', '#ff90e9', '#da5044']
+  document.getElementById('app-background').style.background = colors[Math.floor(Math.random() * ((colors.length - 1)- 0 + 1) + 0)];
+</script>

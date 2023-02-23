@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "make-a-drop-2e66d": {
+      "hosting": {
+        "make-a-drop": [
+          "make-a-drop-2e66d"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "make-a-drop-2e66d"
+  }
+}

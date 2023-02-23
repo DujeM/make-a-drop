@@ -1,0 +1,18 @@
+<div class="item flex-col">
+  <div class="item-progress-bar">
+    <div class="progress" [style.width]="pct + '%'" *ngIf="percentage | async as pct; else loading">
+      <span class="ml-10">{{ pct | number }}%</span>
+    </div>
+    <ng-template #loading>
+      <span class="ml-10">Encrypting...</span>
+    </ng-template>
+  </div>
+
+  <div class="flex-col" *ngIf="downloadURL as url">
+    <h3 class="break">{{ file.name }}</h3>
+  </div>
+  <div *ngIf="error">
+    <h3>Upload failed, file might be too big or you don't have permission.</h3>
+  </div>
+</div>
+

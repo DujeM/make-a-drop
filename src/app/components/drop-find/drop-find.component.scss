@@ -1,0 +1,103 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  height: 100%;
+  margin: 20px 0px;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-gap {
+  gap: 20px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.title {
+  font-size: 46px;
+}
+
+.form-input {
+  outline: none;
+  border: 2px solid #000;
+  box-shadow: 3px 4px 0px 1px #000;
+  width: 290px;
+  padding: 12px 10px;
+  border-radius: 4px;
+  font-size: 15px;
+
+  &:focus {
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #000;
+  }
+}
+
+.button {
+  border: 1px solid;
+  padding: 10px 15px;
+  width: 80px;
+  font-size: 15px;
+  border-radius: 15px;
+  font-weight: 800;
+  box-shadow: 5px 5px 0px 0px #000;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+  &:hover{
+    transform: translateY(4px);
+    box-shadow: 1px 2px 0px 0px #000;
+  }
+}
+
+.button-color {
+  background: #f7ff1d;
+}
+
+.item {
+  border: 2px solid;
+  box-shadow: 5px 5px 0px 0px #000;
+  padding: 20px;
+  background: #fff;
+  min-width: 300px;
+  min-height: 135px;
+  margin: 20px 10px;
+}
+
+.item-progress-bar {
+  min-width: 95%;
+  background: #4effae;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+@font-face{
+  font-family: text-security-disc;
+  src: url("https://raw.githubusercontent.com/noppa/text-security/master/dist/text-security-disc.woff");
+}
+
+.secret-input {
+  font-family: text-security-disc;
+  -webkit-text-security: disc;
+}
