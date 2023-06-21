@@ -1,1 +1,10 @@
+<div class="navbar">
+  <ng-container *ngIf="!auth.currentUser || auth.currentUser.isAnonymous; else loggedIn;">
+    <div class="navbar-button" [routerLink]="'/register'">Register</div>
+    <span class="navbar-icon" [routerLink]="'/login'">Login</span>
+  </ng-container>
+  <ng-template #loggedIn>
+    <span class="navbar-icon" (click)="auth.logout()">Logout</span>
+  </ng-template>
+</div>
 <router-outlet></router-outlet>

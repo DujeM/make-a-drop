@@ -1,0 +1,22 @@
+<div class="main">
+  <span class="title text-shadow">Register</span>
+  <form [formGroup]="registerForm" class="flex-col form-gap">
+    <div class="flex-col">
+      <label for="fullName">Full name</label>
+      <input class="form-input" type="fullName" name="fullName" id="fullName" formControlName="fullName" autocomplete="off">
+    </div>
+    <div class="flex-col">
+      <label for="email">Email</label>
+      <input class="form-input" type="email" name="email" id="email" formControlName="email" autocomplete="off">
+      <span class="error-msg" *ngIf="email.hasError('email')">Please enter a valid email</span>
+    </div>
+    <div class="flex-col">
+      <label for="password">Password</label>
+      <input class="form-input secret-input" type="password" name="password" id="password" formControlName="password" autocomplete="off">
+    </div>
+  </form>
+  <div class="flex">
+    <div class="button" [routerLink]="'/'">Cancel</div>
+    <div class="button button-color" (click)="register()">Register</div>
+  </div>
+</div>

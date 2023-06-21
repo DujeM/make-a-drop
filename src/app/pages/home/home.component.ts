@@ -10,18 +10,7 @@ export class HomeComponent implements OnInit {
   dropCreate = false;
   dropFind = false;
 
-  constructor(
-    private authService: AuthenticationService
-  ) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.authService.anonLogin();
-  }
-
-  cancelCreate(event: any) {
-    if (event) {
-      this.dropCreate = false;
-      this.dropFind = false;
-    }
-  }
+  ngOnInit(): void {}
 }

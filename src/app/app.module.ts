@@ -16,6 +16,8 @@ import { DropCreateComponent } from './components/drop-create/drop-create.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DropFindComponent } from './components/drop-find/drop-find.component';
 import { firebaseConfig } from 'src/environments/firebase';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { firebaseConfig } from 'src/environments/firebase';
     DropComponent,
     DropItemComponent,
     DropCreateComponent,
-    DropFindComponent
+    DropFindComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

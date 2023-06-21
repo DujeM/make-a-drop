@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+}
+
+.navbar-icon {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navbar-button {
+  border: 1px solid;
+  padding: 5px 10px;
+  width: 80px;
+  font-size: 15px;
+  background: #f7ff1d;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
