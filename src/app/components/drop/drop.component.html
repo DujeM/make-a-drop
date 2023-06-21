@@ -8,7 +8,7 @@
   <span>-or-</span>
   <div class="file">
   <label for="uploadBtn" class="button">Choose File</label>
-  <input type="file" id="uploadBtn" class="file-input" (change)="onDrop($event)" hidden>
+  <input type="file" id="uploadBtn" class="file-input" (change)="onDrop($event)" multiple hidden>
   </div>
 
   <div *ngFor="let file of files">

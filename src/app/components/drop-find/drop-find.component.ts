@@ -6,6 +6,7 @@ import { getStorage, ref, deleteObject } from "firebase/storage";
 import * as crypto from 'crypto-js';
 import { environment } from 'src/environments/environment';
 import { Storage } from '@angular/fire/storage';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-drop-find',
@@ -13,8 +14,6 @@ import { Storage } from '@angular/fire/storage';
   styleUrls: ['./drop-find.component.scss']
 })
 export class DropFindComponent implements OnInit {
-  @Output() cancelCreate: EventEmitter<boolean> = new EventEmitter<boolean>();
-
   downloadInProgress = false;
   deleteInProgress = false;
   findForm: FormGroup;
@@ -28,7 +27,8 @@ export class DropFindComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private db: Firestore,
-    private storage: Storage
+    private storage: Storage,
+    private router: Router
   ) {
     this.initForm();
   }
@@ -44,11 +44,6 @@ export class DropFindComponent implements OnInit {
       name: this.name,
       secret: this.secret
     });
-  }
-
-
-  cancel() {
-    this.cancelCreate.emit(true);
   }
 
   async deleteFile() {
@@ -75,8 +70,7 @@ export class DropFindComponent implements OnInit {
         console.error(error);
       });
     }
-
-    this.cancel();
+    this.router.navigateByUrl('/');
   }
 
   async findAndDownload() {

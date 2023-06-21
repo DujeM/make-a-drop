@@ -8,8 +8,6 @@ import { AuthenticationService } from 'src/app/services/authentication.service';
   styleUrls: ['./drop-create.component.scss']
 })
 export class DropCreateComponent implements OnInit {
-  @Output() cancelCreate: EventEmitter<boolean> = new EventEmitter<boolean>();
-
   createForm: FormGroup;
   name: FormControl;
   secret: FormControl;
@@ -32,10 +30,6 @@ export class DropCreateComponent implements OnInit {
       name: this.name,
       secret: this.secret
     });
-  }
-
-  cancel() {
-    this.cancelCreate.emit(true);
   }
 
   next() {
