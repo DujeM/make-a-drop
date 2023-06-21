@@ -5,6 +5,7 @@ import { DropFindComponent } from './components/drop-find/drop-find.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { DropsComponent } from './pages/drops/drops.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'drops',
+    component: DropsComponent
   }
 ];
 

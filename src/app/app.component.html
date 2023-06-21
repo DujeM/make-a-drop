@@ -1,10 +1,14 @@
-<div class="navbar">
-  <ng-container *ngIf="!auth.currentUser || auth.currentUser.isAnonymous; else loggedIn;">
+<ng-container *ngIf="!auth.currentUser || auth.currentUser.isAnonymous; else loggedIn;">
+  <div class="navbar-wrapper">
     <div class="navbar-button" [routerLink]="'/register'">Register</div>
     <span class="navbar-icon" [routerLink]="'/login'">Login</span>
-  </ng-container>
-  <ng-template #loggedIn>
+  </div>
+</ng-container>
+<ng-template #loggedIn>
+  <div class="navbar navbar-wrapper">
+    <div class="navbar-icon" [routerLink]="'/'">Home</div>
+    <div class="navbar-icon" [routerLink]="'/drops'">Drops</div>
     <span class="navbar-icon" (click)="auth.logout()">Logout</span>
-  </ng-template>
-</div>
+  </div>
+</ng-template>
 <router-outlet></router-outlet>

@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { doc, setDoc, collection, addDoc } from "firebase/firestore";
 import * as crypto from 'crypto-js';
 import { environment } from 'src/environments/environment';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-drop',
@@ -20,7 +21,8 @@ export class DropComponent implements OnInit {
 
   constructor(
     private db: Firestore,
-    private router: Router
+    private router: Router,
+    private auth: AuthenticationService
   ) { }
 
   ngOnInit(): void {}
@@ -50,15 +52,13 @@ export class DropComponent implements OnInit {
 
   async finish() {
     await addDoc(collection(this.db, 'drops'), {
+      userId: this.auth.currentUser ? this.auth.currentUser.uid : null,
       name: this.formValue.name,
       secret: crypto.AES.encrypt(this.formValue.secret, this.secretKey).toString(),
       downloadUrls: this.downloadUrls
     })
 
-    this.router.navigate(['/home'])
-    .then(() => {
-      window.location.reload();
-    });
+    this.router.navigateByUrl('/');
   }
 
 }

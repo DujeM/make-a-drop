@@ -18,6 +18,7 @@ import { DropFindComponent } from './components/drop-find/drop-find.component';
 import { firebaseConfig } from 'src/environments/firebase';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { DropsComponent } from './pages/drops/drops.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { RegisterComponent } from './pages/register/register.component';
     DropCreateComponent,
     DropFindComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DropsComponent
   ],
   imports: [
     BrowserModule,

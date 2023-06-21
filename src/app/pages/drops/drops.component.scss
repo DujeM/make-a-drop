@@ -1,7 +1,6 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 15px;
   height: calc(100% - 85px);
@@ -36,41 +35,28 @@
   font-size: 46px;
 }
 
-.form-input {
+.table {
+  width: 300px;
   outline: none;
   border: 2px solid #000;
+  background: white;
   box-shadow: 3px 4px 0px 1px #000;
-  width: 290px;
   padding: 12px 10px;
   border-radius: 4px;
   font-size: 15px;
-
-  &:focus {
-    transform: translateY(4px);
-    box-shadow: 1px 2px 0px 0px #000;
-  }
 }
 
-.button {
-  border: 1px solid;
-  padding: 10px 15px;
-  width: 80px;
-  font-size: 15px;
-  border-radius: 15px;
-  font-weight: 800;
-  box-shadow: 5px 5px 0px 0px #000;
-  text-align: center;
+.head-bg {
+  background: #f1f3f4;
+}
+
+tbody td {
+  height: 40px;
+}
+
+.action {
   cursor: pointer;
-  margin-bottom: 20px;
-
-  &:hover{
-    transform: translateY(4px);
-    box-shadow: 1px 2px 0px 0px #000;
-  }
-}
-
-.button-color {
-  background: #f7ff1d;
+  text-decoration: underline;
 }
 
 .item {
@@ -90,14 +76,4 @@
 
 .ml-10 {
   margin-left: 10px;
-}
-
-@font-face{
-  font-family: text-security-disc;
-  src: url("https://raw.githubusercontent.com/noppa/text-security/master/dist/text-security-disc.woff");
-}
-
-.secret-input {
-  font-family: text-security-disc;
-  -webkit-text-security: disc;
 }

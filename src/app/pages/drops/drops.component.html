@@ -1,0 +1,26 @@
+<div class="main">
+  <span class="title text-shadow">Drops</span>
+  <ng-container *ngIf="!downloadInProgress; else downloading;">
+    <table class="table" *ngIf="drops.length">
+      <thead class="head-bg">
+        <tr>
+          <td>Name</td>
+          <td>Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let drop of drops">
+          <td>{{ drop.name }}</td>
+          <td class="action" (click)="download(drop)">Download</td>
+        </tr>
+      </tbody>
+    </table>
+  </ng-container>
+  <ng-template #downloading>
+    <div class="item flex-col-center">
+      <div class="item-progress-bar">
+          <span class="ml-10">Decrypting...</span>
+      </div>
+    </div>
+  </ng-template>
+</div>
